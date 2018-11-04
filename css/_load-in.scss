@@ -1,0 +1,112 @@
+@import "utilities";
+$height-difference: 50px;
+
+.preload-finished {
+  display: none;
+  opacity: 0;
+}
+.is-preload {
+  height: 1000px;
+  text-align: center;
+  width: 100%;
+  display: block;
+
+  .falling-circle1 {
+    background-color: #d35400;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: auto;
+    transform: translateY(-120px);
+    animation: rain 0.4s;
+    animation-iteration-count: 3;
+    animation-delay: 0s;
+    @keyframes rain {
+      0% {
+        transform: inherit;
+      }
+      100% {
+        transform: translateY(340px);
+      }
+    }
+  }
+  .falling-circle2 {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: auto;
+    transform: translateY(-120px);
+    animation: rain2 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-iteration-count: 7;
+    animation-delay: 0s;
+
+    @keyframes rain2 {
+      0% {
+        transform: inherit;
+      }
+      100% {
+        transform: translateY(340px);
+      }
+    }
+  }
+
+  .falling-circle3 {
+    background-color: blue;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: auto;
+    transform: translateY(-120px);
+    animation: rain3 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-iteration-count: 9;
+    animation-delay: 0.5s;
+    @keyframes rain3 {
+      0% {
+        transform: inherit;
+      }
+      100% {
+        transform: translateY(340px);
+      }
+    }
+  }
+
+  .final-circle {
+    background-color: $primary-color;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 350px;
+    animation: opacity 1s forwards,
+      scale 2s cubic-bezier(0, 3.39, 1, 1) forwards;
+    animation-delay: 2s, 0s;
+    opacity: 1;
+    @keyframes scale {
+      0% {
+        transform: inherit;
+      }
+      25% {
+        transform: scale(1.2);
+      }
+      50% {
+        transform: scale(1.4);
+      }
+      75% {
+        transform: scale(1.6);
+      }
+      100% {
+        transform: scale(1.8) translateY(-30px);
+      }
+    }
+
+    @keyframes opacity {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "utilities";
+
+.container-2 {
+  width: 100%;
+  height: 800px;
+}
+
+.wrapper3 {
+  margin: 40px auto;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+  background: $accent;
+
+  .child {
+    flex: 1 1 auto;
+    width: 40%;
+    height: 100%;
+  }
+
+  .text-content {
+    padding: 20px;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 200;
+      line-height: 50px;
+      text-align: center;
+    }
+    p {
+      padding: 15px;
+    }
+    ul {
+      font-size: 40px;
+      text-decoration: none;
+      padding-left: 10px;
+      line-height: 70px;
+      text-decoration: none;
+      list-style-type: none;
+      font-weight: 100;
+      i {
+        padding-right: 30px;
+        width: 80px !important;
+        height: 50px !important;
+      }
+    }
+    .align {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 18%;
+      a {
+        flex: 0 0 auto;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        color: white;
+        padding: 15px 40px;
+        border: 2px solid $primary-color;
+        background: $primary-color;
+        border-radius: 2px;
+        font-weight: 1000;
+
+        &:hover {
+          animation: wiggle 0.5s ease-in-out;
+          @keyframes wiggle {
+            0% {
+              transform: rotate(1deg);
+            }
+            25% {
+              transform: rotate(-1deg);
+            }
+            50% {
+              transform: rotate(1deg);
+            }
+            75% {
+              transform: rotate(-1deg);
+            }
+            100% {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .img-content {
+    background: url(https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+      center/cover;
+  }
+}
